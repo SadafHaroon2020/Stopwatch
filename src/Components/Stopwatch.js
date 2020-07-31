@@ -17,7 +17,12 @@ class Stopwatch extends React.Component {
       timerTime: this.state.timerTime,
       timer_start: Date.now() - this.state.timerTime
     });
-  
+    /**using call back function to call after every 10 ms use predefine setInterval */
+    this.timer = setInterval(() => {
+        this.setState({
+          timerTime: this.state.timer_start
+        });
+      }, 10);
   
   };
   /**setting isTimerOn to false to stop the stopwatch. */
@@ -35,6 +40,11 @@ class Stopwatch extends React.Component {
 
 
   render() {
+    const { timerTime } = this.state;
+    console.log(timerTime)
+    /*time spent in milliseconds.*/
+    let centi_Sec = Math.floor(timerTime / 10) % 100;
+   
 
     return (
       <div className="Stopwatch">
