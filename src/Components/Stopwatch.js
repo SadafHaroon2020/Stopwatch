@@ -62,11 +62,20 @@ class Stopwatch extends React.Component {
             <div className="Stopwatch">
                 <div><h3>Stopwatch</h3></div>
                 <div className="display">
-                {hrs} : {mins} : {seconds} : {centi_Sec}
-                    <button onClick={this.start}>Start</button>
-                    <button onClick={this.stop}>Stop</button>
-                    <button onClick={this.start}>Pause</button>
-                    <button onClick={this.resetTimer}>Restart</button>
+                    {hrs} : {mins} : {seconds} : {centi_Sec}
+                    {/* using JSX syntax for if-else checking on state to implement function on button */}
+                    {this.state.isTimerOn === false && this.state.timerTime === 0 && (
+                        <button onClick={this.start}>Start</button>
+                    )}
+                    {this.state.isTimerOn === true && (
+                        <button onClick={this.stop}>Stop</button>
+                    )}
+                    {this.state.isTimerOn === false && this.state.timerTime > 0 && (
+                        <button onClick={this.start}>Pause</button>
+                    )}
+                    {this.state.isTimerOn === false && this.state.timerTime > 0 && (
+                        <button onClick={this.resetTimer}>Reset</button>
+                    )}
 
                 </div>
             </div>

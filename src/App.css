@@ -16,3 +16,15 @@ button {
   margin: 0 5px;
   cursor: pointer;
 }
+button:hover {
+  background-color: #10a36b;
+}
+.Stopwatch button {
+  padding: 12px 32px;
+  font-size: 20px;
+}
+.display {
+  padding: 40px 0;
+  font-size: 48px;
+}
+
