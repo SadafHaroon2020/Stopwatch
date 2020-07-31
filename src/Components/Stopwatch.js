@@ -41,7 +41,7 @@ class Stopwatch extends React.Component {
 
     render() {
         const { timerTime } = this.state;
-        console.log(timerTime)
+        
         /**
          * extracting time in hrs,mins,seconds and centiseconds.
          * using Math.floor to round the number and using mod to have exact the number.abs
@@ -50,11 +50,11 @@ class Stopwatch extends React.Component {
          * 
          **/
         let centi_Sec = ("0" + (Math.floor(timerTime / 10) % 100)).slice(-2);
-        console.log(centi_Sec)
+        
         let seconds = ("0" + (Math.floor(timerTime / 1000) % 60)).slice(-2);
-        console.log(seconds)
+      
         let mins = ("0" + (Math.floor(timerTime / 60000) % 60)).slice(-2);
-        console.log(mins)
+       
         let hrs = ("0" + Math.floor(timerTime / 3600000)).slice(-2);
 
 
