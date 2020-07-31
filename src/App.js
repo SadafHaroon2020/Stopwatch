@@ -9,10 +9,8 @@ class App extends React.Component {
         
           <Stopwatch />
        
-      
       </div>
     );
   }
 }
 export default App;
-
