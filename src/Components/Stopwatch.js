@@ -65,8 +65,8 @@ class Stopwatch extends React.Component {
                 {hrs} : {mins} : {seconds} : {centi_Sec}
                     <button onClick={this.start}>Start</button>
                     <button onClick={this.stop}>Stop</button>
-                    <button onClick="">Pause</button>
-                    <button onClick="">Restart</button>
+                    <button onClick={this.start}>Pause</button>
+                    <button onClick={this.resetTimer}>Restart</button>
 
                 </div>
             </div>
